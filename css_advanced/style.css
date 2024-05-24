@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
+    background-color: #f0f0f0;
 }
 
 a {
@@ -32,10 +33,12 @@ header nav ul {
 
 header nav ul li {
     margin: 0 10px;
+    cursor: pointer;
 }
 
 header div {
     text-align: center;
+    padding: 20px;
 }
 
 header h1 {
@@ -43,7 +46,11 @@ header h1 {
     margin: 20px 0;
 }
 
-header button {
+header .buttons {
+    margin: 20px 0;
+}
+
+header .buttons button {
     margin: 10px 5px;
     padding: 10px 20px;
     background-color: #5c67f2;
@@ -51,9 +58,10 @@ header button {
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-header button:hover {
+header .buttons button:hover {
     background-color: #4a53d4;
 }
 
@@ -69,9 +77,10 @@ section h2 {
     text-align: center;
     color: #5c67f2;
     margin-bottom: 20px;
+    font-size: 32px;
 }
 
-section div {
+.section-content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -87,20 +96,30 @@ article img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+article p {
+    margin: 5px 0;
 }
 
 blockquote {
     background-color: #c2a2ff;
     color: #fff;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
     border-radius: 5px;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 blockquote img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
 }
 
 blockquote footer {
@@ -108,21 +127,120 @@ blockquote footer {
     margin-top: 10px;
 }
 
-footer div {
+.popular-tutorials {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.popular-tutorials article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.popular-tutorials img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.popular-tutorials p {
     margin: 10px 0;
 }
 
-footer img {
-    width: 50px;
-    height: auto;
+.popular-tutorials .rating {
+    display: flex;
+    justify-content: center;
+    color: #f5a623;
 }
 
-footer a {
-    margin: 0 10px;
-}
-
-.footer-social a {
+.free-membership {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #282828;
     color: #fff;
+}
+
+.free-membership h2 {
+    color: #c2a2ff;
+}
+
+.free-membership .membership-benefits {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.free-membership article {
+    margin: 20px;
+    flex-basis: 20%;
+}
+
+.free-membership button {
+    padding: 10px 20px;
+    background-color: #5c67f2;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.free-membership button:hover {
+    background-color: #4a53d4;
+}
+
+.faq {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.faq h2 {
+    color: #5c67f2;
+}
+
+.faq .faq-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.faq article {
+    flex-basis: 45%;
+    margin: 20px 0;
+}
+
+.faq h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.faq p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+footer .footer-social a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+footer .footer-social a:hover {
+    color: #c2a2ff;
 }
 
 @media (max-width: 768px) {
@@ -130,7 +248,7 @@ footer a {
         flex-direction: column;
     }
 
-    section div {
+    .section-content, .popular-tutorials, .membership-benefits, .faq-content {
         flex-direction: column;
         align-items: center;
     }
