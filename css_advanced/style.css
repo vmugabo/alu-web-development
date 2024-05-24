@@ -14,14 +14,13 @@ a {
 header, footer {
     background-color: #1f1f1f;
     color: #fff;
-    padding: 20px;
-    text-align: center;
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
 }
 
 header nav ul {
@@ -36,18 +35,38 @@ header nav ul li {
     cursor: pointer;
 }
 
-header div {
+header .header-content {
     text-align: center;
-    padding: 20px;
+    padding: 60px 20px;
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
 }
 
-header h1 {
+header .header-content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header .header-content h1 {
     font-size: 48px;
     margin: 20px 0;
+    color: #fff;
+    position: relative;
+    z-index: 2;
 }
 
 header .buttons {
     margin: 20px 0;
+    position: relative;
+    z-index: 2;
 }
 
 header .buttons button {
@@ -63,6 +82,23 @@ header .buttons button {
 
 header .buttons button:hover {
     background-color: #4a53d4;
+}
+
+header .register-btn {
+    padding: 10px 20px;
+    background-color: #f56a6a;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+header .register-btn:hover {
+    background-color: #d45555;
 }
 
 main {
